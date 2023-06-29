@@ -62,17 +62,17 @@ function Home() {
     <div className="w-full  min-h-screen">
       <Search  onSearch={onSearch}></Search>
 
-      <div className="w-10/12 gap-5 mx-auto my-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+      <div className="w-10/12 h-auto my-10 gap-5 mx-auto my-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
         { users.length > 0 &&  users.map((user)=>{
           return <Card data={user} key={user.id}></Card>
         }) }
       </div>
 
-      <div className="fixed bottom w-full flex justify-center items-center py-10">
+      <div className=" my-10 bg-white z-50 w-full flex justify-center items-center py-2.5">
       <div>
           
-          <button disabled={page==1} onClick={goToPreviousPage} className={ page!=1 ? "w-12 h-12 cursor-pointer  rounded-full hover:bg-blue-800 bg-blue-500 text-white mx-5" :"w-12 h-12  rounded-full cursor-not-allowed  bg-gray-500 text-white mx-5" } ><i className='bx bx-left-arrow-alt'></i></button>
-            <button disabled={maxPage===page} onClick={goToNextPage} className={ maxPage!=page ? "w-12 h-12 cursor-pointer  rounded-full hover:bg-blue-800 bg-blue-500 text-white mx-5" :"w-12 h-12  rounded-full cursor-not-allowed  bg-gray-500 text-white mx-5" } ><i className='bx bx-right-arrow-alt'></i></button>
+          <button disabled={page==1} onClick={goToPreviousPage} className={ page!=1 ? " w-10 md:w-12  h-10 md:h-12 cursor-pointer  rounded-full hover:bg-blue-800 bg-blue-500 text-white mx-5" :" w-10 md:w-12  h-10 md:h-12  rounded-full cursor-not-allowed  bg-gray-500 text-white mx-5" } ><i className='bx bx-left-arrow-alt'></i></button>
+            <button disabled={maxPage===page} onClick={goToNextPage} className={ maxPage!=page ? " w-10 md:w-12  h-10 md:h-12 cursor-pointer  rounded-full hover:bg-blue-800 bg-blue-500 text-white mx-5" :" w-10 md:w-12  h-10 md:h-12  rounded-full cursor-not-allowed  bg-gray-500 text-white mx-5" } ><i className='bx bx-right-arrow-alt'></i></button>
             </div>
       </div>
     </div>

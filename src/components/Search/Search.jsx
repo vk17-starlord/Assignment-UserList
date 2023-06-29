@@ -10,7 +10,7 @@ function Search({ onSearch, value }) {
   };
 
   return (
-    <div className="bg-red-500  flex justify-center items-center bg-banner bg-cover w-full h-[40vh]">
+    <div className="bg-red-500  flex justify-center items-center bg-banner bg-cover w-full h-[25vh] md:h-[40vh]">
       <div className="search rounded-full flex cursor-pointer  justify-center items-center px-2.5 w-10/12 md:w-8/12 bg-white overflow-hidden   ">
       <i className='bx ml-5  text-xl bx-search'></i>
         <input
